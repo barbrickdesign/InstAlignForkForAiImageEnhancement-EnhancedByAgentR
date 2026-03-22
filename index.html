@@ -4,10 +4,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <meta charset="utf-8">
   <meta name="description"
-        content="Mask Grounding is an innovative auxiliary task that can be added during training to improve model performance for Referring Image Segmentation (RIS)">
-  <meta name="keywords" content="VATEX, RIS, Vision-Aware Text Features, Referring Image Segmentation">
+        content="InstAlign – AI-powered instance-aware image segmentation for inventory management. Automatically identify, count, and catalog objects in warehouse and retail images.">
+  <meta name="keywords" content="InstAlign, AI image segmentation, inventory management, object detection, instance segmentation, warehouse automation, retail analytics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instance-Aware Generalized Referring Expression Segmentation</title>
+  <title>InstAlign – AI Image Enhancement for Inventory Applications</title>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -100,13 +100,209 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Navigation */
+    .navbar.is-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    /* Inventory use-case cards */
+    .inventory-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .inventory-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+    }
+
+    .inventory-card .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .inventory-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 960px) {
+      .inventory-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .inventory-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* How-it-works steps */
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4a90e2, #0570C0);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 8px rgba(74,144,226,0.4);
+    }
+
+    /* Workflow pipeline */
+    .pipeline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 2rem 0;
+    }
+
+    .pipeline-step {
+      background: linear-gradient(135deg, #4a90e2 0%, #0570C0 100%);
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-align: center;
+      min-width: 130px;
+    }
+
+    .pipeline-arrow {
+      font-size: 1.4rem;
+      color: #4a90e2;
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 4rem 2rem;
+      border-radius: 20px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta-section h2 {
+      color: #fff !important;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #1565c0;
+      color: #fff !important;
+      padding: 0.9rem 2.4rem;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 15px rgba(21,101,192,0.5);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(21,101,192,0.6);
+    }
+
+    /* Metric badge */
+    .metric-badge {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      border-radius: 12px;
+      padding: 1.2rem 1rem;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    }
+
+    .metric-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0570C0;
+      line-height: 1;
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.3rem;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
 
+<!-- Navigation Bar -->
+<nav class="navbar is-dark is-sticky" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#hero">
+        <strong style="color:#fff; font-size:1.1rem;">InstAlign</strong>
+        <span style="color:#aaa; font-size:0.85rem; margin-left:0.5rem;">| AI Inventory Vision</span>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#research">Research</a>
+        <a class="navbar-item" href="#inventory-applications">Inventory Applications</a>
+        <a class="navbar-item" href="#how-it-works">How It Works</a>
+        <a class="navbar-item" href="#contact">Contact</a>
+        <div class="navbar-item">
+          <a href="https://github.com/nero1342/InstAlign" class="button is-info is-small" target="_blank">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
 
-<section class="hero">
+
+<section class="hero" id="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -199,7 +395,7 @@
 </section>
 
 
-<section class="section hero is-light">
+<section class="section hero is-light" id="research">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -265,6 +461,197 @@
     </h2>
   </div>
 </div> -->
+
+
+<!-- ============================================================
+     INVENTORY APPLICATIONS SECTION
+     ============================================================ -->
+<section class="section" id="inventory-applications" style="background: linear-gradient(180deg,#f8faff 0%,#fff 100%);">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="color:#0570C0;">
+          <span class="icon" style="margin-right:0.4rem;"><i class="fas fa-boxes"></i></span>
+          Inventory Applications
+        </h2>
+        <p class="subtitle is-5" style="color:#555;">
+          InstAlign's instance-aware AI segmentation is purpose-built to power next-generation inventory intelligence.
+          By understanding <em>which</em> object is <em>where</em> — with language precision — it bridges the gap between raw warehouse imagery and actionable data.
+        </p>
+      </div>
+    </div>
+
+    <!-- Key metrics -->
+    <div class="metrics-row">
+      <div class="metric-badge">
+        <div class="metric-value">SOTA</div>
+        <div class="metric-label">State-of-the-art on gRefCOCO &amp; Ref-ZOM benchmarks (<a href="https://arxiv.org/abs/2411.15087" target="_blank" style="color:#0570C0;">paper</a>)</div>
+      </div>
+      <div class="metric-badge">
+        <div class="metric-value">Multi</div>
+        <div class="metric-label">Handles multi-object, complex scenes in one pass</div>
+      </div>
+      <div class="metric-badge">
+        <div class="metric-value">Text</div>
+        <div class="metric-label">Natural-language queries ("find all red boxes")</div>
+      </div>
+      <div class="metric-badge">
+        <div class="metric-value">Open</div>
+        <div class="metric-label">Open-source weights available for integration</div>
+      </div>
+    </div>
+
+    <!-- Use-case cards -->
+    <div class="inventory-grid">
+
+      <div class="inventory-card">
+        <div class="card-icon" style="color:#C55A11;">
+          <i class="fas fa-warehouse"></i>
+        </div>
+        <h3 class="title is-5">Warehouse Stock Counting</h3>
+        <p>Automatically count and segment individual units on shelves or pallets from a single photograph. Eliminate manual cycle counts and reduce human error.</p>
+      </div>
+
+      <div class="inventory-card">
+        <div class="card-icon" style="color:#0570C0;">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3 class="title is-5">Natural-Language Item Retrieval</h3>
+        <p>Query your image catalog in plain English — <em>"show me all blue 10-liter containers on the middle shelf"</em> — and get precise segmentation masks back instantly.</p>
+      </div>
+
+      <div class="inventory-card">
+        <div class="card-icon" style="color:#2ea44f;">
+          <i class="fas fa-tag"></i>
+        </div>
+        <h3 class="title is-5">Automated Product Cataloging</h3>
+        <p>Segment each SKU individually from product or shelf images. Export per-item crops with metadata to populate e-commerce or ERP systems without manual photography.</p>
+      </div>
+
+      <div class="inventory-card">
+        <div class="card-icon" style="color:#ff3860;">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h3 class="title is-5">Damage &amp; Anomaly Detection</h3>
+        <p>Identify damaged, misplaced, or missing items by comparing segmented instances against expected planograms, triggering alerts before issues reach customers.</p>
+      </div>
+
+      <div class="inventory-card">
+        <div class="card-icon" style="color:#9b59b6;">
+          <i class="fas fa-barcode"></i>
+        </div>
+        <h3 class="title is-5">Label &amp; Barcode Verification</h3>
+        <p>Segment label regions on complex packaging and route them to OCR or barcode readers — even when items are partially occluded or at awkward angles.</p>
+      </div>
+
+      <div class="inventory-card">
+        <div class="card-icon" style="color:#1abc9c;">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <h3 class="title is-5">Shelf Analytics &amp; Planogram Compliance</h3>
+        <p>Map each product instance to its shelf position and compare against the target planogram in real time, giving merchandisers an instant compliance score.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW IT WORKS SECTION
+     ============================================================ -->
+<section class="section hero is-light" id="how-it-works">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="color:#0570C0;">
+          <span class="icon" style="margin-right:0.4rem;"><i class="fas fa-cogs"></i></span>
+          How InstAlign Works for Inventory
+        </h2>
+        <p class="subtitle is-6" style="color:#666;">
+          A straightforward pipeline from raw image to structured inventory data.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pipeline diagram -->
+    <div class="pipeline">
+      <div class="pipeline-step" aria-label="Step 1: Capture Image"><span aria-hidden="true">📸</span><br>Capture Image</div>
+      <div class="pipeline-arrow" aria-hidden="true">→</div>
+      <div class="pipeline-step" aria-label="Step 2: Text Query"><span aria-hidden="true">✍️</span><br>Text Query</div>
+      <div class="pipeline-arrow" aria-hidden="true">→</div>
+      <div class="pipeline-step" style="background: linear-gradient(135deg,#C55A11,#e67e22);" aria-label="Step 3: InstAlign AI processing"><span aria-hidden="true">🤖</span><br>InstAlign AI</div>
+      <div class="pipeline-arrow" aria-hidden="true">→</div>
+      <div class="pipeline-step" aria-label="Step 4: Instance Masks output"><span aria-hidden="true">🎯</span><br>Instance Masks</div>
+      <div class="pipeline-arrow" aria-hidden="true">→</div>
+      <div class="pipeline-step" style="background: linear-gradient(135deg,#2ea44f,#27ae60);" aria-label="Step 5: Inventory Data export"><span aria-hidden="true">📊</span><br>Inventory Data</div>
+    </div>
+
+    <!-- Steps -->
+    <div style="max-width:680px; margin: 0 auto;">
+
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div>
+          <strong>Capture a photograph</strong> of your shelf, warehouse aisle, or receiving dock using any standard camera or mobile device. No special hardware required.
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div>
+          <strong>Provide a natural-language query</strong> describing what you are looking for, e.g. <em>"all cardboard boxes on the left pallet"</em> or a structured attribute like a SKU name.
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div>
+          <strong>InstAlign processes the image and query together.</strong> Its instance-aware model identifies each relevant object, assigns it an individual token, and generates precise pixel-level segmentation masks.
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div>
+          <strong>Export structured results</strong> — bounding boxes, segmentation masks, item counts, and confidence scores — directly into your WMS, ERP, or e-commerce platform via API.
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">5</div>
+        <div>
+          <strong>Trigger automated workflows:</strong> reorder alerts, damage reports, planogram compliance checks, or catalog updates — all driven by real image data, not manual entry.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CALL TO ACTION / CONTACT SECTION
+     ============================================================ -->
+<section class="section" id="contact">
+  <div class="container is-max-desktop">
+    <div class="cta-section">
+      <h2 class="title is-3">Ready to Enhance Your Inventory Operations?</h2>
+      <p style="color:#ccc; font-size:1.05rem; max-width:600px; margin:1rem auto 0;">
+        Barbrick Design is exploring how InstAlign's AI image segmentation technology can be integrated into inventory and cataloging workflows.
+        Reach out to learn more or collaborate.
+      </p>
+      <div style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="https://barbrickdesign.github.io/" class="cta-button" target="_blank">
+          <span class="icon"><i class="fas fa-globe"></i></span>
+          Visit Barbrick Design
+        </a>
+        <a href="https://github.com/nero1342/InstAlign" class="cta-button" target="_blank"
+           style="background:#333;">
+          <span class="icon"><i class="fab fa-github"></i></span>
+          View InstAlign on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 
